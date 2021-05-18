@@ -40,7 +40,7 @@ class Message:
             # Should be ready to read
             data = self.sock.recv(4096)
             print(data)
-            self._send_buffer += data
+            # self._send_buffer += data
         except BlockingIOError:
             # Resource temporarily unavailable (errno EWOULDBLOCK)
             pass
