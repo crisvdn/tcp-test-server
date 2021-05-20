@@ -56,7 +56,7 @@ class Message:
             try:
                 # Should be ready to write
                 self.sock.send(bytes('echo: ', 'utf-8'))
-                # sent = self.sock.send(self._send_buffer)
+                sent = self.sock.send(self._send_buffer)
             except BlockingIOError:
                 # Resource temporarily unavailable (errno EWOULDBLOCK)
                 pass
